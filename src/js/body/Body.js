@@ -50,7 +50,7 @@ export default class Body extends Component {
             let result = window.confirm(output) ? true : false
             if (!result) {
                 while (result === false) {
-                    if (window.confirm("WTF ấn thanh toán đi???")) {
+                    if (window.confirm("WTF ấn OK thanh toán đi???")) {
                         result = true
                     }
                 }
