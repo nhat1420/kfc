@@ -1,13 +1,188 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.add-product {
+  display: flex;
+  flex-direction: column;
+}
+
+.textBold {
+  font-weight: bold;
+}
+
+#app {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 600px;
+  margin-top: 30px;
+}
+
+@media (max-width: 400px) {
+  #app {
+    flex-direction: column;
+  }
+
+  .add-product {
+    margin-top: 20px;
+  }
+
+  #bill {
+    margin: 0;
+  }
+}
+
+#bill {
+  width: 350px;
+  background-color: #fc4f35;
+  padding: 4px;
+}
+
+.header {
+  height: 120px;
+  position: relative;
+}
+.header__img {
+  height: 90px;
+  position: absolute;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) translateY(30%);
+}
+
+.body {
+  background-color: #fff;
+  padding: 0 12px 30px;
+  font-size: 15px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.body__title {
+  display: block;
+  text-align: center;
+  padding: 36px 16px;
+  opacity: 0.8;
+  font-size: 17px;
+}
+
+.item-product {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-product + .item-product {
+  margin-top: 10px;
+}
+.name-product {
+  opacity: 0.8;
+  width: 50%;
+}
+
+.item-options {
+  opacity: 0.8;
+  flex: 1;
+  display: flex;
+}
+
+.btn {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: #ccc;
+  text-align: center;
+  line-height: 16px;
+  border-radius: 4px;
+  cursor: default;
+}
+
+.btn-decrease {
+  margin-right: 8px;
+}
+
+.btn-increase {
+  margin-right: auto;
+}
+
+.amount-product {
+  letter-spacing: -1px;
+  margin-right: 8px;
+}
+.item-price {
+  margin-right: 8px;
+}
+.btn-add {
+  margin: 30px 0;
+  padding: 8px 30px;
+  font-weight: bold;
+  font-size: 18px;
+  opacity: 0.8;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.payment {
+  margin-top: 12px;
+  padding: 12px;
+  background-color: #f4f4f4;
+  border-radius: 6px;
+}
+
+.payment-info {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.8;
+}
+
+.payment-info + .payment-info {
+  margin-top: 6px;
+}
+
+.btn-checkout {
+  display: block;
+  background-color: #fc4f35;
+  padding: 8px 0;
+  text-align: center;
+  color: #fff;
+  font-size: 17px;
+  margin-top: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.key-product {
+  display: flex;
+  justify-content: space-between;
+}
+
+.key-product + .key-product {
+  margin-top: 6px;
+}
+
+.input-item {
+  margin-left: 8px;
 }

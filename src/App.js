@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Header from './js/header/Header'
+import Body from './js/body/Body'
+import AddProduct from './js/addProduct/AddProduct'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+    constructor(props) {
+        super(props)
+
+        this.handleClickAddProduct = this.handleClickAddProduct.bind(this)
+        this.getProduct = React.createRef()
+    }
+
+    handleClickAddProduct(product) {
+        this.getProduct.current.getProductFromAdd(product)
+    }
+
+    render() {
+        return (
+            <div id='app'>
+                <div className="add-product">
+                    <AddProduct handleClickAddProduct={this.handleClickAddProduct} />
+                </div>
+                <div id="bill">
+                    <div className="main">
+                        <Header />
+                        <Body ref={this.getProduct} />
+                    </div>
+                </div>
+            </div>
+        )
+    }
 }
-
-export default App;
