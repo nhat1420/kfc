@@ -81,9 +81,6 @@ export default class ListProduct extends Component {
 
     clearProducts(products) {
         this.setState({ data: products })
-        // this.setState(prevState => {
-        //     this.props.clearProducts(prevState.data)
-        // })
     }
 
     render() {

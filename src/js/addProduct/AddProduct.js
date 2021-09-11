@@ -32,6 +32,7 @@ export default class AddProduct extends Component {
             }
 
             if (isAddSuccess) {
+                window.alert("OK thêm thành công :v")
                 return {
                     name: '',
                     quantity: '',
